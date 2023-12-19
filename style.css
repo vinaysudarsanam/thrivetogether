@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Average&display=swap');
+body {
+    background: #000000;
+    font-family: "Average";
+    color: #030303;
+    line-height: 1.5;
+    padding: 1em;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .image2 {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    float: right;
+  }
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.center-button {
+    background-color: #2666AD;
+    color: #FFFFFF;
+    border: 2px solid #2666AD;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px 20px;
+    flex: 0 0 30%; /* Occupy 24% of the width (1/4 of the width) */
+    margin-right: 5%; /* Add space in between */
+    text-align: center; /* Center text horizontally within the button */
+}
+
+  .description-box-black {
+    display: flex; /* Use Flexbox for the description box and image */
+    align-items: center;
+    background-color: #000000;
+
+}
+
+  .description-box {
+    display: flex;
+    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    transition: box-shadow 0.2s ease-in-out;
+    overflow: auto; /* Added to handle overflow */
+}
+
+/* Add media query for screen width > 768px (adjust this value as needed) */
+@media (min-width: 769px) {
+    .intro-container {
+      display: grid; /* Use CSS Grid for the main content container on larger screens */
+      grid-template-columns: 1fr 1fr; /* Two columns for image and description */
+      grid-gap: 20px; /* Add gap between the columns */
+      align-items: flex-start; /* Align items to the top */
+    }
+  
+    .image {
+      order: 2; /* Reorder the image to appear second */
+      max-width: 100%; /* Allow the image to take full width on larger screens */
+      margin-bottom: 0; /* Remove the margin at the bottom */
+    }
+  }
+  
+  /* Add media query for screen width <= 768px (adjust this value as needed) */
+  @media (max-width: 768px) {
+    .intro-container {
+      display: flex; /* Use Flexbox for the main content container on smaller screens */
+      flex-direction: column-reverse; /* Reverse the order of content for better layout */
+    }
+  
+    .image {
+      max-width: 100%; /* Allow the image to take full width on smaller screens */
+    }
+  }
+
+.image-container {
+    position: relative;
+    text-align: center; /* Center the content horizontally */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Existing styles */
+
+.white-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.black-line {
+    width: 2px;
+    background-color: black;
+    height: 80px; /* Adjust as needed */
+    margin: 0 20px;
+}
+
+.column {
+    flex: 1;
+    width: 100%
+}
+
+.column p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.white-header{
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-top: 2px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.large-header{
+    font-size: 25px; /* Adjust the font size as needed */
+    margin-top: 2px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.indented {
+    margin-left: 10px; /* Adjust the amount of indent as needed */
+}
+
+.tab-text {
+    text-align: center; /* Center-align the text within each tab */
+    margin-left: 10px; /* Adjust the amount of indent as needed */
+    white-space: normal; /* Allow text to wrap */
+}
+
+
+@media screen and (max-width: 768px) {
+    .tab-text {
+        display: block; /* Change to block-level display on smaller screens */
+        text-align: left; /* Reset text alignment for smaller screens */
+    }
+}
+
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content within the tabs */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 8%;
+    width: 100%; /* Set the content container to take up the full width of the screen */
+    max-width: 1200px; /* Add a maximum width to avoid excessive stretching on very large screens */
+    margin: 0 auto; /* Center the content container horizontally on the page */
+}
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 8%;
+}
+
+.overlay h2 {
+    font-size: 2px;
+    margin-bottom: 10px;
+}
+
+.small-header{
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+/* Add this to your style.css file */
+.small-text {
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.bottom-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white; /* Set the background color to transparent */
+}
+
+/* Style for the white box at the bottom */
+.bottom-box {
+    background-color: white;
+    width: calc(100%); /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border-radius: 10px;
+}
+
+/* Style for the image in the bottom right corner */
+.bottom-image {
+    background-color: white;
+    float: right;
+    border-left: 1px solid white; /* Add a left border for the image */
+    padding-left: 10px; /* Add some padding to separate the image from the border */
+    padding-right: 20px;
+    bottom: 0;
+    left: 0;
+    height: 50px; /* Adjust the height as needed */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-buttons,
+.header {
+    display: flex;
+    gap: 1.5em;
+}
+
+.top-buttons button,
+.header button {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "Average";
+    font-size: 1.35em;
+    color: #FFFF;
+    cursor: pointer;
+}
+
+.top-buttons button:hover {
+    text-decoration: underline; 
+}
+
+.header button {
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.centered-content {
+    align-items: center; /* Center content horizontally */
+    display: center;
+    position: center;
+    justify-content: center;
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.center-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure the overlay is on top of other content */
+}
+
+
+.box {
+    flex: 1;
+    width: calc(33.33% - 10px); /* 1/3 of the width with 10px spacing in between */
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    margin-right: 10px; /* Spacing between boxes */
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+
+  .box-container {
+    display: flex; /* Align boxes horizontally */
+  }
+
+  .box:last-child {
+    margin-right: 0;
+  }  
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .UNC {
+    background-color: #4B9CD3;
+  }
+  
+  .Mid {
+    background-color: #2666AD;
+  }
+  
+  .Duke {
+    background-color: #003087;
+  }
+
+  .circle {
+    width: 40px; /* Set the circle size */
+    height: 40px;
+    color: white; /* Text color within the circle */
+    background-color: #000000; /* Circle background color */
+    border-radius: 50%; /* Make it a circle */
+    display: center;
+    justify-content: center; /* Center the number horizontally */
+    align-items: center; /* Center the number vertically */
+    top: -20px; /* Adjust the vertical position */
+    left: 50%; /* Center the circle horizontally within the box */
+    font-weight: bold; /* Make the number bold */
+    font-size: 20px; /* Adjust the font size */
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Center text vertically within the circle */
+  }
+
+  /* Style the scroll box and tabs container */
+.scroll-box {
+    background-color: #2666AD;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.tabs-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tab {
+    flex: 0 0 100%; /* Each tab takes up 100% of the width initially */
+    padding: 10px;
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.prev-button,
+.next-button {
+    background-color: #2666AD;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Style the active button */
+.active-button {
+    background-color: #4B9CD3;
+}
+
+  
+  
+  /* Define styles for the text boxes */
+
+.text-box {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.mid1 {
+    background-color: #3278BA;
+}
+
+.mid2 {
+    background-color: #1954A0;
+}
+
+  
